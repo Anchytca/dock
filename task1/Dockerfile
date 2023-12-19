@@ -21,7 +21,7 @@ COPY volk.jpg /var/www/my_project/img/volk.jpg
 COPY default /etc/nginx/sites-available/default
 
 RUN sed -i 's# /var/www/html# /var/www/my_project#' /etc/nginx/sites-available/default && \
-	sed -i 's# user www-data;# user user1;#' /etc/nginx/nginx.conf
+	sed -i 's#user www-data;#user user1;#' /etc/nginx/nginx.conf
 
 EXPOSE 8080/tcp
 
